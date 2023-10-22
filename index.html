@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="remixicon/remixicon.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <ul>
+                <i class="fa fa-search"></i>
+                <li><input type="text" id="search" placeholder="Search"></li>
+                <li><button class="btn" onclick="getWeatherInfo()">Fetch</button></li>
+            </ul>
+            <div class="name">
+                <h1 id="city">. . . . .</h1>
+                <img src="" height="100" id="icon">
+            </div>
+            <div class="temp">
+                <h2 class="maintemp" id="temp">...</h2>
+                <div class="minmaxtemp">
+                    <h3 class="mintemp">Min : <span id="min">...</span> <i class="ri-celsius-line"></i></h3>
+                    <h3 class="maxtemp">Max : <span id="max">...</span> <i class="ri-celsius-line"></i></h3>
+                </div>
+            </div>
+            <p id="text">.....</p>
+            <div class="air">
+                <div class="airTitle">AIR CONDITIONS :</div>
+                <div class="airDetails">
+                    <div class="item">
+                        <div class="ititle">
+                            <i class="ri-temp-cold-line"></i>
+                            <div>Real Feel</div>
+                        </div>
+                        <div><span id="feel">...</span><i class="ri-celsius-line"></i></div>
+                    </div>
+                    <div class="item">
+                        <div class="ititle">
+                            <i class="ri-windy-line"></i>
+                            <div>Wind</div>
+                        </div>
+                        <div id="wind">... km/h</div>
+                    </div>
+                    <div class="item">
+                        <div class="ititle">
+                            <i class="ri-contrast-drop-2-line"></i>
+                            <div>Chance of rain</div>
+                        </div>
+                        <div id="rain">... %</div>
+                    </div>
+                    <div class="item">
+                        <div class="ititle">
+                            <i class="ri-sun-fill"></i>
+                            <div>UV Index</div>
+                        </div>
+                        <div id="uv"></div>    
+                    </div>
+                </div>
+            </div>
+            <div class="converter"></div>
+            <div class="forecast" id="forecast">
+                <!-- Data from script -->
+            </div>
+        </div>
+    </section>
+
+    <script src="js/ajax.googleapis.com_ajax_libs_jquery_3.6.4_jquery.min.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>
